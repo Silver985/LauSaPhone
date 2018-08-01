@@ -1,0 +1,8 @@
+{
+  "name": "ionic start LauSaPhone",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "3c60a1be"
+}
