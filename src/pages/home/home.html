@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar [color]="isRecording ? 'danger' : 'primary'">
     <ion-title>
       LauSaPhone
     </ion-title>
@@ -10,7 +10,16 @@
   Click on Button to enable LauSaPhone!
   <br><br>
 
+    <ion-item>
+    <ion-label floating>Telefonnummer</ion-label>
+    <ion-input type="number" [(ngModel)]="varTelefonnummer"></ion-input>
+  </ion-item>
   
-<button ion-button color="dark">Dark</button>
+<br><br>
+  
+<button ion-button full (click)="getPermissions()" color="blue">LauSaPhone berechtigen</button>
+<button ion-button full (click)="startListening()" color="blue">LauSaPhone Starten</button>
+<button ion-button full (click)="stopListening()" *ngIf="isIos()" color="blue" >LauSaPhone beenden</button>  
+  
   
 </ion-content>
